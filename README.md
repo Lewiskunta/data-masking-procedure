@@ -25,7 +25,7 @@ It can be adopted directly or adapted to fit an existing QMS structure.
 - Implementation requirements for structured and unstructured data
 - Key and token management requirements including HSM and KMS constraints
 - Ten KPIs with collection methods and breach response thresholds
-- Pre-release validation gates (G1–G7)
+- Pre-release validation gates (G1-G7)
 - Audit programme with four audit types and finding SLA tiers
 - Three-tier incident classification with regulatory notification guidance
 - Six appendices: request forms, exception process, execution checklist, 
