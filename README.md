@@ -48,12 +48,12 @@ in practice almost always trace back to a skipped stage, not a deficient techniq
 Discretion over technique selection produces inconsistency across teams and audit 
 gaps that are hard to close retroactively. The matrix in Section 4.2 removes that 
 discretion. The exception process in Appendix B exists for cases where the approved 
-technique cannot be applied — but it requires a documented risk assessment and dual 
+technique cannot be applied, but it requires a documented risk assessment and dual 
 approval. That cost is deliberate.
 
 Tokenisation is the default for payment and account data rather than FPE because 
 FPE implemented without proper key management infrastructure introduces weaknesses 
-that are non-obvious to engineers who aren't working in cryptography daily — 
+that are non-obvious to engineers who aren't working in cryptography daily, 
 particularly FF3 without correct tweak management. Tokenisation with a properly 
 isolated vault is operationally simpler to get right. FPE is listed as an approved 
 alternative where format preservation is a hard requirement and the key management 
@@ -68,13 +68,13 @@ must itself be protected. Substitution eliminates that requirement entirely.
 
 ### Why the KPI targets are zero or 100%
 
-The KPIs set at zero — masking incident rate, false negative rate, unmasked data 
-access in non-production — reflect that there is no acceptable frequency for those 
+The KPIs set at zero: masking incident rate, false negative rate, unmasked data 
+access in non-production - reflect that there is no acceptable frequency for those 
 events. Setting a non-zero target normalises incidents. These are binary controls: 
 either unmasked data left the production boundary without authorisation or it didn't.
 
 The KPIs set at 100% follow the same logic. 95% masking coverage means 5% of 
-sensitive data assets have no active control. That is not a near-miss — it is an 
+sensitive data assets have no active control. That is not a near-miss, it is an 
 uncontrolled exposure.
 
 Pipeline execution time is the only KPI with a flexible target because it is 
@@ -88,7 +88,7 @@ per environment tier; the environment refresh runbook holds the values.
 The distinction between Masking Failure, Potential Breach, and Confirmed Breach 
 exists because the regulatory response obligations differ at each tier. GDPR's 
 72-hour notification clock starts when you become aware of a breach likely to 
-result in risk to individuals — not when you confirm it. Treating every masking 
+result in risk to individuals, not when you confirm it. Treating every masking 
 failure as a confirmed breach produces over-reporting. Treating every failure as 
 low-severity until confirmed produces missed notification windows.
 
@@ -100,7 +100,7 @@ review before escalation.
 
 ### Scope boundary
 
-Masking at the point of collection — data never stored in unmasked form — is out 
+Masking at the point of collection, data never stored in unmasked form is out 
 of scope. This procedure governs data that already exists unmasked and needs to 
 cross an environment boundary or be shared externally. Tooling is also out of 
 scope; tool selection changes faster than governance procedures should. The 
